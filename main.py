@@ -10,6 +10,8 @@ ROOT = os.path.dirname(os.path.realpath(__file__))
 def main(input, output, sigma):
     u = iio.read(input)
     print("hello world", u.shape)
+    
+    u = u[:,:,0]
 
     v = u + np.random.randn(*u.shape) * sigma
 
