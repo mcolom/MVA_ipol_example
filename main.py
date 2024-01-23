@@ -11,7 +11,7 @@ def main(input, output, sigma):
     u = iio.read(input)
     print("hello world", u.shape)
     
-    v = u + np.random.randn(*u.shape) * np.sqrt(sigma)
+    v = u + np.random.randn(*u.shape) * sigma # Add noise of STD sigma
 
     iio.write(output, v)
 
